@@ -9,26 +9,23 @@ namespace domainEntities
     public class Sesion
     {
         private static User user;
-        private System.DateTime from;
-        private System.DateTime to;
+        private static System.DateTime from;
+        private static System.DateTime to;
         private static  Sesion instance;
         public static Sesion open(User u)
         {
             if ( instance!=null)
             {
-                instance = new Sesion(user);
+                instance = new Sesion();
+                from = DateTime.Now;
+                user = u;
+                
             }
             return instance;
-
-
-        }
-        private Sesion(User user)
-        {
-            this.user = user;
-            from = System.DateTime.Now;
 }
         public void close()
         {
+            to = DateTime.Now;
         }
         public int MyProperty { get; set; }
     }

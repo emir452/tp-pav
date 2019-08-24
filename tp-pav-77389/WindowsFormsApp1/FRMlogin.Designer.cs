@@ -39,8 +39,8 @@
             tlp.RowStyles.Add(new RowStyle(SizeType.Percent, 33f));
             tlp.RowStyles.Add(new RowStyle(SizeType.Percent, 33f));
             tlp.RowStyles.Add(new RowStyle(SizeType.Percent, 33f));
-            tlp.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50f));
-            tlp.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50f));
+            tlp.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25f));
+            tlp.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 75f));
             lblUser = new Label();
             lblUser.Text = "nomre de usuario usuario";
             txtUser = new TextBox();
@@ -52,6 +52,13 @@
             btnInit.Click += new System.EventHandler(this.btnInit_clik);
             btnExit = new Button();
             btnExit.Text = "salir";
+            tlp.Controls.Add(lblUser, 0, 0);
+            tlp.Controls.Add(txtUser, 1, 0);
+            tlp.Controls.Add(lblPasword, 0, 1);
+            tlp.Controls.Add(txtPasword, 1, 1);
+            tlp.Controls.Add(btnExit,0,2);
+            tlp.Controls.Add(btnInit, 1, 2);
+            this.Controls.Add(tlp);
             this.Load += new System.EventHandler(FRMlogin_load);
             this.ResumeLayout(true);
         }

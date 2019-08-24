@@ -26,6 +26,7 @@ private void btnInit_clik(object sender, EventArgs e)
  }
         private void FRMlogin_load(object sender,EventArgs e)
         {
+            this.CenterToParent();
         }
     }
 }
