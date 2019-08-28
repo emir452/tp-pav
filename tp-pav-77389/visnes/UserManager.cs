@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-namespace visnes
+using domainEntities;
+    namespace visnes
 {
     public class UserManager
     {
@@ -12,7 +12,7 @@ namespace visnes
         {
 
 }
-        public User initSesion(String userName, String pasword)
+        public Sesion initSesion(String userName, String pasword)
         {
             return null;
 

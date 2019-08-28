@@ -44,5 +44,11 @@
     <Compile Include="UserManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\domainEntities\domainEntities.csproj">
+      <Project>{d6893691-5585-40af-9556-73497985c0a8}</Project>
+      <Name>domainEntities</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

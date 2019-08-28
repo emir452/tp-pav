@@ -24,17 +24,6 @@ public Boolean contains(Student student)
         {
             return this.student.Equals(student);
 }
-        public Boolean contains(Teme teme)
-{
-            foreach (DetailClass i in detailClass )
-            {
-if ( i.contains(teme))
-                {
-                    return true;
-}
-}
-return false;
-        }
         public Boolean contains(Teacher teacher)
         {
             return this.teacher.Equals(teacher);
