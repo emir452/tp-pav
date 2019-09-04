@@ -18,7 +18,7 @@ namespace WindowsFormsApp1
         }
 private void btnInit_clik(object sender, EventArgs e)
         {
-
+            string profile=selectRol.SelectedText;
 }
         private void btnExit_clik(object sender, EventArgs e)
         {
@@ -27,6 +27,13 @@ private void btnInit_clik(object sender, EventArgs e)
         private void FRMlogin_load(object sender,EventArgs e)
         {
             this.CenterToParent();
+        }
+        private void fillCombo()
+        {
+            selectRol.Text = "seleccione rol";
+            selectRol.DisplayMember = "administrador";
+           selectRol.DisplayMember = "profesor";
+            selectRol.DisplayMember = "alumno";
         }
     }
 }

@@ -29,38 +29,57 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.tlp = new System.Windows.Forms.TableLayoutPanel();
+            this.lblUser = new System.Windows.Forms.Label();
+            lblUser.Text = "INGRESE NOMBRE DE USUARIO";
+            this.txtUser = new System.Windows.Forms.TextBox();
+            this.lblPasword = new System.Windows.Forms.Label();
+            lblPasword.Text = "INGRESE CONTRASEÑA";
+            this.txtPasword = new System.Windows.Forms.TextBox();
+            this.btnExit = new System.Windows.Forms.Button();
+            btnExit.Text = "salir";
+            btnExit.Click += new System.EventHandler(btnExit_clik);
+            this.btnInit = new System.Windows.Forms.Button();
+            btnInit.Text = "iniciar sesión";
+            btnInit.Click += new System.EventHandler(btnInit_clik);
+               
+
+            this.selectRol = new System.Windows.Forms.ComboBox();
+            this.fillCombo();
+            this.tlp.SuspendLayout();
+            this.SuspendLayout();
+            this.tlp.ColumnCount = 2;
+            this.tlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
+            this.tlp.RowCount = 4;
+            this.tlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlp.Size = new System.Drawing.Size(200, 100);
+            this.tlp.TabIndex = 0;
+
+            this.tlp.Controls.Add(this.lblUser, 0, 0);
+            this.tlp.Controls.Add(this.txtUser, 1, 0);
+            this.tlp.Controls.Add(this.lblPasword, 0, 1);
+            this.tlp.Controls.Add(this.txtPasword, 1, 1);
+            this.tlp.Controls.Add(selectRol, 2, 2);
+this.tlp.Controls.Add(this.btnExit, 0, 3);
+            this.tlp.Controls.Add(this.btnInit, 1, 3);
+            
+            this.tlp.Location = new System.Drawing.Point(0, 0);
+            this.tlp.Name = "tlp";
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 100F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.tlp);
+            this.Name = "FRMlogin";
             this.Text = "iniciar seción";
-        tlp =new TableLayoutPanel();
-            tlp.RowCount = 3;
-            tlp.ColumnCount = 2;
-            tlp.RowStyles.Add(new RowStyle(SizeType.Percent, 33f));
-            tlp.RowStyles.Add(new RowStyle(SizeType.Percent, 33f));
-            tlp.RowStyles.Add(new RowStyle(SizeType.Percent, 33f));
-            tlp.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25f));
-            tlp.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 75f));
-            lblUser = new Label();
-            lblUser.Text = "nomre de usuario usuario";
-            txtUser = new TextBox();
-            lblPasword = new Label();
-            lblPasword.Text = "contraseña";
-            txtPasword = new TextBox();
-            btnInit = new Button();
-            btnInit.Text = "iniciar sesión";
-            btnInit.Click += new System.EventHandler(this.btnInit_clik);
-            btnExit = new Button();
-            btnExit.Text = "salir";
-            tlp.Controls.Add(lblUser, 0, 0);
-            tlp.Controls.Add(txtUser, 1, 0);
-            tlp.Controls.Add(lblPasword, 0, 1);
-            tlp.Controls.Add(txtPasword, 1, 1);
-            tlp.Controls.Add(btnExit,0,2);
-            tlp.Controls.Add(btnInit, 1, 2);
-            this.Controls.Add(tlp);
-            this.Load += new System.EventHandler(FRMlogin_load);
-            this.ResumeLayout(true);
+            this.Load += new System.EventHandler(this.FRMlogin_load);
+            this.tlp.ResumeLayout(false);
+            this.tlp.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
 
@@ -70,8 +89,10 @@
         private TextBox txtUser;
         private Label lblPasword;
         private TextBox txtPasword;
+        private ComboBox selectRol;
         private Button btnInit;
         private Button btnExit;
+
 
         
     }

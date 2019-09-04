@@ -10,14 +10,13 @@ namespace domainEntities
     /// </summary>
     class DetailClass
     {
-        private Teme teme;
-        private float calification;
+        public Teme teme { get; set;}
+        public float calification { get; set;}
         public DetailClass(Teme teme, float calification)
         {
             this.teme = teme;
             this.calification = calification;
         }
-public int MyProperty { get; set; }
 public Boolean contains(Teme teme)
         {
             return this.teme.Equals(teme); 

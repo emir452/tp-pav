@@ -8,14 +8,13 @@ namespace domainEntities
 {
     public class Person
     {
-        private int id;
-        private String name;
-        private String surname;
-        private String email;
-        private DateTime virtDate;
-        private int telephoneNmber;
-        private int dni;
-        public int MyProperty { get; set; }
+        public int id { get; set; }
+         public String name { get; set; }
+         public String surname { get; set; }
+        public String email { get; set;}
+        public DateTime virtDate { get; set;}
+        public int telephoneNmber { get; set;}
+        public int dni { get; set;}
         public Boolean isHe(String name)
         {
             return this.name.Equals(name);

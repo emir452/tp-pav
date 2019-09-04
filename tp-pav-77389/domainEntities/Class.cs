@@ -8,10 +8,10 @@ namespace domainEntities
 {
     public class Class
     {
-        private Teacher teacher;
-        private Student student;
+        public Teacher teacher { get; set;}
+        public Student student { get; set; }
         private List<DetailClass> detailClass;
-        private DateTime date;
+        public DateTime date { get; set; }
         public Class(Teacher teacher, Student student)
         {
             detailClass = new List<DetailClass>();
@@ -19,8 +19,7 @@ namespace domainEntities
             this.student = student;
             date = DateTime.Now;
 }
-        public int MyProperty { get; set; }
-public Boolean contains(Student student)
+        public Boolean contains(Student student)
         {
             return this.student.Equals(student);
 }

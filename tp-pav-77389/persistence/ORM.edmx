@@ -5,6 +5,15 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="bd_alumnosModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="administradores">
+          <Key>
+            <PropertyRef Name="legajo" />
+          </Key>
+          <Property Name="legajo" Type="int" Nullable="false" />
+          <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="apellido" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="mail" Type="varchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="Alumnos">
           <Key>
             <PropertyRef Name="legajo" />
@@ -72,6 +81,7 @@
           <Property Name="descripcion" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityContainer Name="bd_alumnosModelStoreContainer">
+          <EntitySet Name="administradores" EntityType="Self.administradores" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Alumnos" EntityType="Self.Alumnos" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Clases" EntityType="Self.Clases" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Clases_Tema" EntityType="Self.Clases_Tema" Schema="dbo" store:Type="Tables" />
@@ -84,6 +94,15 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="bd_alumnosModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="administradores">
+          <Key>
+            <PropertyRef Name="legajo" />
+          </Key>
+          <Property Name="legajo" Type="Int32" Nullable="false" />
+          <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="mail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
         <EntityType Name="Alumnos">
           <Key>
             <PropertyRef Name="legajo" />
@@ -93,7 +112,6 @@
           <Property Name="apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="dni" Type="Int64" Nullable="false" />
           <Property Name="fecha_nac" Type="DateTime" Nullable="false" Precision="0" />
-          <NavigationProperty Name="NavigationProperty1" />
         </EntityType>
         <EntityType Name="Clases">
           <Key>
@@ -151,7 +169,8 @@
           <Property Name="id_tema" Type="Int32" Nullable="false" />
           <Property Name="descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="bd_alumnosEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="bd_alumnosEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="administradores" EntityType="Self.administradores" />
           <EntitySet Name="Alumnos" EntityType="Self.Alumnos" />
           <EntitySet Name="Clases" EntityType="Self.Clases" />
           <EntitySet Name="Clases_Tema" EntityType="Self.Clases_Tema" />
@@ -164,7 +183,17 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="bd_alumnosModelStoreContainer" CdmEntityContainer="bd_alumnosEntities">
+        <EntityContainerMapping StorageEntityContainer="bd_alumnosModelStoreContainer" CdmEntityContainer="bd_alumnosEntities1">
+          <EntitySetMapping Name="administradores">
+            <EntityTypeMapping TypeName="bd_alumnosModel.administradores">
+              <MappingFragment StoreEntitySet="administradores">
+                <ScalarProperty Name="legajo" ColumnName="legajo" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="apellido" ColumnName="apellido" />
+                <ScalarProperty Name="mail" ColumnName="mail" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Alumnos">
             <EntityTypeMapping TypeName="bd_alumnosModel.Alumnos">
               <MappingFragment StoreEntitySet="Alumnos">

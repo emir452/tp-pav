@@ -8,8 +8,8 @@ namespace domainEntities
 {
     class Teme
     {
-        private String name;
-        private String description;
+        public   String name { get; set;}
+        public String description { get; set;}
         public Teme(String name, String description)
         {
             this.name = name;
