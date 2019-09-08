@@ -17,6 +17,7 @@ using domainEntities;
 if (rol==Role.Roles.MANAGER)
             {
 
+
             }
 
         }

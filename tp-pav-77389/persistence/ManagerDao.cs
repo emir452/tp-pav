@@ -26,7 +26,7 @@ namespace persistence
         {
             return db.administradores.ToList();
         }
-        public void update(ManagerDao manager)
+        public void update(Manager manager)
         {
             
 }

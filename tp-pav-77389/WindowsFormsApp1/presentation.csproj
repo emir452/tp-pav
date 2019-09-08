@@ -52,6 +52,24 @@
     <Compile Include="FRMlogin.Designer.cs">
       <DependentUpon>FRMlogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FRMManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMManager.Designer.cs">
+      <DependentUpon>FRMManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMStudent.Designer.cs">
+      <DependentUpon>FRMStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMTeacher.Designer.cs">
+      <DependentUpon>FRMTeacher.cs</DependentUpon>
+    </Compile>
     <Compile Include="ItemCombo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
