@@ -12,6 +12,6 @@ namespace persistence
         void update(T entiti);
         void delete(int id);
         List<T> selectAll();
-
+T findById(int id);
     }
 }

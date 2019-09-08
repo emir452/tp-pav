@@ -42,7 +42,7 @@
             this.btnInit = new System.Windows.Forms.Button();
             btnInit.Text = "iniciar sesión";
             btnInit.Click += new System.EventHandler(btnInit_clik);
-               
+            this.tlp.Dock = DockStyle.Fill;
 
             this.selectRol = new System.Windows.Forms.ComboBox();
             this.fillCombo();
@@ -56,15 +56,17 @@
             this.tlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tlp.Size = new System.Drawing.Size(200, 100);
             this.tlp.TabIndex = 0;
 
             this.tlp.Controls.Add(this.lblUser, 0, 0);
             this.tlp.Controls.Add(this.txtUser, 1, 0);
             this.tlp.Controls.Add(this.lblPasword, 0, 1);
             this.tlp.Controls.Add(this.txtPasword, 1, 1);
-            this.tlp.Controls.Add(selectRol, 2, 2);
-this.tlp.Controls.Add(this.btnExit, 0, 3);
+            lblCombo = new Label();
+            lblCombo.Text = "seleccione rol";
+            this.tlp.Controls.Add(lblCombo, 0, 2);
+            this.tlp.Controls.Add(selectRol, 1,2);
+            this.tlp.Controls.Add(this.btnExit, 0, 3);
             this.tlp.Controls.Add(this.btnInit, 1, 3);
             
             this.tlp.Location = new System.Drawing.Point(0, 0);
@@ -89,6 +91,7 @@ this.tlp.Controls.Add(this.btnExit, 0, 3);
         private TextBox txtUser;
         private Label lblPasword;
         private TextBox txtPasword;
+        private Label lblCombo;
         private ComboBox selectRol;
         private Button btnInit;
         private Button btnExit;

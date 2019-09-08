@@ -8,25 +8,32 @@ using domainEntities;
  
 namespace persistence
 {
-    class StudentDao :IDao<Student>
+    class StudentDao : IDao<Student>
     {
-        public void update (Student student)
+       
+        private bd_alumnosEntities1 db;
+        public StudentDao()
+        {
+            db = new bd_alumnosEntities1();
+
+
+        }
+        public void update(Student student)
         {
             
         }
         public void add(Student student)
         {
+            db.Alumnos.Add(student);
 }
 public void delete(int id)
-        {
+    {
+            db.Alumnos.Remove(id);
 
-        }
-        public List<Student> selectAll()
-        {
-            bd_alumnosEntities1 c = new bd_alumnosEntities1();
-            return c.Alumnos.ToList();
-        }
-            
-            
-    }
+}
+public List<Student> selectAll()
+{
+            return db.Alumnos.ToList();
+}
+}
 }

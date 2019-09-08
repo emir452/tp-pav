@@ -12,9 +12,12 @@ using domainEntities;
         {
 
 }
-        public Sesion initSesion(String userName, String pasword)
+        public  void initSesion(String userName, String pasword,  Role.Roles rol)
         {
-            return null;
+if (rol==Role.Roles.MANAGER)
+            {
+
+            }
 
         }
 

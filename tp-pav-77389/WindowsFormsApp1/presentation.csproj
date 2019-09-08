@@ -52,6 +52,7 @@
     <Compile Include="FRMlogin.Designer.cs">
       <DependentUpon>FRMlogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="ItemCombo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FRMlogin.resx">
@@ -78,6 +79,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\visnes\visnes.csproj">
+      <Project>{5905a17b-5661-422f-ae75-3da85f0dc548}</Project>
+      <Name>visnes</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
