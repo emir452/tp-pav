@@ -8,15 +8,12 @@ using domainEntities;
  
 namespace persistence
 {
-    class StudentDao : IDao<Student>
+    public  class StudentDao : IDao<Student>
     {
-       
-        private bd_alumnosEntities1 db;
+        private DataBaseConnection connection;
         public StudentDao()
         {
-            db = new bd_alumnosEntities1();
-
-
+            connection = DataBaseConnection.getInstance();
         }
         public void update(Student student)
         {
@@ -24,7 +21,7 @@ namespace persistence
         }
         public void add(Student student)
         {
-            db.Alumnos.Add(student);
+            
 }
 public void delete(int id)
     {

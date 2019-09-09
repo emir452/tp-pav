@@ -40,9 +40,26 @@ namespace persistence
         }
         public int executeDml(String sql )
         {
-
-        }
-        private void openConnection()
+            executor.CommandText = sql;
+            int queriResult = executor.ExecuteNonQuery();
+            this.closeConnection();
+            return queriResult;
+}
+        public DataTable executeQueri(string sql, object[] parameters)
+        {
+            DataTable table = new DataTable();
+            executor.CommandText = sql;
+            for (int i = 0; i < parameters.Length; i++)
+            {
+                if (parameters[i] != null)
+                { 
+                    executor.Parameters.AddWithValue((i + 1).ToString(), parameters[i])
+}
+}
+            table.Load(executor.ExecuteReader());
+            return table;
+}
+private void openConnection()
         {
 try
             {
