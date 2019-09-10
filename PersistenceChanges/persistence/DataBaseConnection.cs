@@ -22,7 +22,7 @@ namespace persistence
     }
         public static DataBaseConnection getInstance()
         {
-            if (instance !=null)
+            if (instance ==null)
             {
                 instance = new DataBaseConnection();
            }
@@ -52,8 +52,8 @@ namespace persistence
             for (int i = 0; i < parameters.Length; i++)
             {
                 if (parameters[i] != null)
-                { 
-                    executor.Parameters.AddWithValue((i + 1).ToString(), parameters[i])
+                {
+                    executor.Parameters.AddWithValue((i + 1).ToString(), parameters[i]);
 }
 }
             table.Load(executor.ExecuteReader());
