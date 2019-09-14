@@ -20,6 +20,24 @@ namespace WindowsFormsApp1
         {
 
 }
-        private void itemModifiStudent_click(Object sender, )
+        private void itemModifiStudent_click(Object sender, EventArgs e)
+        {
+
+}
+        private void itemDeleteStudent_click(object sender, EventArgs e)
+        {
+
+        }
+        private void itemRegisterTeacher_click(object sender, EventArgs e)
+{
+}
+        private void itemModifiTeacher_click(object sender, EventArgs e)
+{
+
+}
+        private void itemDeleteTeacher_Click(object sender, EventArgs e)
+        {
+        }
+
     }
 }
