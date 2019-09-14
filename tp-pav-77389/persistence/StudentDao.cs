@@ -32,7 +32,7 @@ public StudentDao()
     {
 
             string sql = "insert in to alumnos  values (@param1, @param2,@param3,@param4";
-            Object array = { student.name, student.surname, student.dni, student.virtDate };
+            Object array = new object [ student.name, student.surname, student.dni, student.virtDate];
             connection.executeQueri(sql, array);
 
     }

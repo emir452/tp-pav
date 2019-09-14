@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LoggerManager.cs" />
+    <Compile Include="LoggerStudent.cs" />
+    <Compile Include="LoggerTeacher.cs" />
     <Compile Include="Role.cs" />
     <Compile Include="ScreenManager.cs" />
     <Compile Include="Sesion.cs" />

@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using visnes;
 namespace WindowsFormsApp1
 {
     public  class ItemCombo
     {
-        public  visnes.Role.Roles  key { get; set;}
+        public Role role   { get; set;}
         public String value { get; set; }
-        public ItemCombo(visnes.Role.Roles key, String value)
+        public ItemCombo(Role role, String value)
         {
-            this.key = key;
+            this.role = role;
             this.value = value;
         }
         public String toString()    

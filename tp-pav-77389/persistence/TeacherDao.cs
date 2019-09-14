@@ -6,16 +6,22 @@ using System.Threading.Tasks;
 using domainEntities;
 namespace persistence
 {
-    class TeacherDao : IDao<Teacher>
+    public  class TeacherDao : IDao<Teacher>
     {
+        private DataBaseConnection connection;
+        private ObjectBuilder parser;
         public TeacherDao()
         {
+            connection = DataBaseConnection.getInstance();
+            parser = new ObjectBuilder();
             
         }
     public Teacher findById(int id)
         {
-            }
-        public List<Teacher> selectAll()
+            string sql = "select * from profesores p where p.id=@param1";
+            return  parser.parseTeacher(connection.executeQueri(sql, id)); 
+}
+public List<Teacher> selectAll()
         {
 
         }

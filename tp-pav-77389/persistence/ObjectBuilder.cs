@@ -15,7 +15,7 @@ public Student parseStudent(DataRow row)
             student.id = int.Parse(row[0].ToString());
             student.name = row[1].ToString();
             student.surname = row[2].ToString();
-            student.dni = row[3].ToString();
+            student.dni = int.Parse(row[3].ToString());
             student.virtDate = DateTime.Parse(row[4].ToString());
             return student;
 }

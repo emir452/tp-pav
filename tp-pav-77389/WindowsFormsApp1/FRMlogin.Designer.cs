@@ -31,7 +31,7 @@
         {
             this.tlp = new System.Windows.Forms.TableLayoutPanel();
             this.lblUser = new System.Windows.Forms.Label();
-            lblUser.Text = "INGRESE NOMBRE DE USUARIO";
+            lblUser.Text = "ingrese legajo";
             this.txtUser = new System.Windows.Forms.TextBox();
             this.lblPasword = new System.Windows.Forms.Label();
             lblPasword.Text = "INGRESE CONTRASEÑA";
