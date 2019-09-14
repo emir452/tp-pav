@@ -16,5 +16,10 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+       private void  itemRegisterStudent_click(Object sender, EventArgs e)
+        {
+
+}
+        private void itemModifiStudent_click(Object sender, )
     }
 }
