@@ -15,6 +15,7 @@ namespace domainEntities
         public DateTime virtDate { get; set;}
         public int telephoneNmber { get; set;}
         public int dni { get; set;}
+        public string password { get; set;} 
         public Boolean isHe(String name)
         {
             return this.name.Equals(name);
@@ -23,6 +24,5 @@ namespace domainEntities
         {
             return this.id == id;
 }
-
-    }
+}
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace visnes
 {
-    public class Role
+    public abstract  class Role
     {
         public  enum Roles
         {
@@ -15,5 +15,6 @@ namespace visnes
             STUDENT,
         }
         public int MyProperty { get; set; }
+        public abstract Sesion login(int id, string pasword);
     }
-}
+    }

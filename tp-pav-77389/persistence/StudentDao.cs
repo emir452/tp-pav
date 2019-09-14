@@ -5,35 +5,43 @@ using System.Text;
 using System.Threading.Tasks;
 using domainEntities;
 
- 
+
 namespace persistence
 {
-    class StudentDao : IDao<Student>
-    {
-       
-        private bd_alumnosEntities1 db;
-        public StudentDao()
+    public class StudentDao : IDao<Student>
+{
+        private DataBaseConnection connection;
+        private ObjectBuilder builder;
+public StudentDao()
         {
-            db = new bd_alumnosEntities1();
-
-
-        }
+            connection = DataBaseConnection.getInstance();
+            builder = new ObjectBuilder();
+                }
         public void update(Student student)
         {
-            
-        }
-        public void add(Student student)
-        {
-            db.Alumnos.Add(student);
 }
-public void delete(int id)
+    
+    public void delete(int id)
     {
-            db.Alumnos.Remove(id);
 
-}
-public List<Student> selectAll()
-{
-            return db.Alumnos.ToList();
+    }
+    public List<Student> selectAll()
+    {
+    }
+    public void add(Student student)
+    {
+
+            string sql = "insert in to alumnos  values (@param1, @param2,@param3,@param4";
+            Object array = { student.name, student.surname, student.dni, student.virtDate };
+            connection.executeQueri(sql, array);
+
+    }
+    public Student  findByID(int id)
+    {
+            String sql = "select * from alumnos a where a.id=@param1";
+            return builder.parseStudent(connection.executeQueri(sql, id));
+
+
 }
 }
 }

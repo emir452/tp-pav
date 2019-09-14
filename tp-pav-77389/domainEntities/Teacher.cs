@@ -8,6 +8,7 @@ namespace domainEntities
 {
     public class Teacher :Person
     {
+        public int yearEntered { get; set;} 
        
     }
 }
