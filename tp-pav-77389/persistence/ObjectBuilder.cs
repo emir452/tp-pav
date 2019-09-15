@@ -11,6 +11,10 @@ namespace persistence
     {
 public Student parseStudent(DataRow row)
 {
+            if (row==null)
+            {
+                return null;
+            }
             Student student = new Student();
             student.id = int.Parse(row[0].ToString());
             student.name = row[1].ToString();
@@ -21,6 +25,10 @@ public Student parseStudent(DataRow row)
 }
         public Manager parseManager(DataRow row)
 {
+            if (row==null)
+            {
+                return null;
+            }
             Manager manager = new Manager();
             manager.id = int.Parse(row[0].ToString());
             manager.name = row[1].ToString();
@@ -30,6 +38,10 @@ public Student parseStudent(DataRow row)
         }
         public Teacher parseTeacher(DataRow row)
 {
+            if (row==null)
+            {
+                return null;
+            }
             Teacher teacher = new Teacher();
             teacher.id = int.Parse(row[0].ToString());
             teacher.password= row[1].ToString();

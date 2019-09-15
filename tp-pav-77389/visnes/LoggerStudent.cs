@@ -20,9 +20,10 @@ namespace visnes
                 throw new ObjectNotFoundException();
             }
             if (student.password.Equals(password))
-
-
-
-        }
+{
+                return new Sesion(new User(student, Roles.STUDENT));
+            }
+            throw new ObjectNotFoundException();
+}
     }
 }
