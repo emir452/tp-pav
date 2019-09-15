@@ -34,7 +34,6 @@ namespace WindowsFormsApp1
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Text = "FRMManager";
             tlp = new TableLayoutPanel();
-            TableLayoutPanel = new TableLayoutPanel();
             menuContainer = new MenuStrip();
             students = new ToolStrip();
             students.Text = "estudiantes";

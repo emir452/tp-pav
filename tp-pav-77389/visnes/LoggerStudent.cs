@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using persistence;
+using visnes.exceptions;
 using domainEntities;
 namespace visnes
 {
@@ -11,6 +13,15 @@ namespace visnes
         override 
             public Sesion login(int id, String password)
         {
+            StudentDao helper = new StudentDao();
+            Student student = helper.findByID(id);
+            if (student==null)
+            {
+                throw new ObjectNotFoundException();
+            }
+            if (student.password.Equals(password))
+
+
 
         }
     }

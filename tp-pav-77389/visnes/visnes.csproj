@@ -41,11 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="exceptions\ObjectNotFoundException.cs" />
     <Compile Include="LoggerManager.cs" />
     <Compile Include="LoggerStudent.cs" />
     <Compile Include="LoggerTeacher.cs" />
     <Compile Include="Role.cs" />
-    <Compile Include="ScreenManager.cs" />
     <Compile Include="Sesion.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UserManager.cs" />
@@ -55,6 +55,10 @@
     <ProjectReference Include="..\domainEntities\domainEntities.csproj">
       <Project>{d6893691-5585-40af-9556-73497985c0a8}</Project>
       <Name>domainEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\persistence\persistence.csproj">
+      <Project>{fd42daf4-1fd7-47ac-a37c-e36c1f8a4928}</Project>
+      <Name>persistence</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

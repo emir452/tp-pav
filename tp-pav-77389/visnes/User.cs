@@ -10,9 +10,10 @@ namespace visnes
     {
         public Person personalData { get; set; }
         public Role.Roles role { get; set; }
-        public User(Role.Roles role)
+        public User( Person personalData, Role.Roles role)
         {
             this.role = role;
+            this.personalData = personalData;
         }
 
     }

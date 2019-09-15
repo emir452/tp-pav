@@ -15,7 +15,8 @@ using domainEntities;
         public  void login(int id, String pasword, Role rol)
         {
             Sesion sesion = rol.login(id,pasword);
-
+            
+           
 }
 
 }
