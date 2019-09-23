@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5905A17B-5661-422F-AE75-3DA85F0DC548}</ProjectGuid>
+    <ProjectGuid>{608CE2E6-B92C-47EB-A5CB-72C67748615A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>visnes</RootNamespace>
-    <AssemblyName>visnes</AssemblyName>
+    <RootNamespace>utilReferences</RootNamespace>
+    <AssemblyName>utilReferences</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,23 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="exceptions\ObjectNotFoundException.cs" />
-    <Compile Include="LoggerManager.cs" />
-    <Compile Include="LoggerStudent.cs" />
-    <Compile Include="LoggerTeacher.cs" />
-    <Compile Include="Role.cs" />
-    <Compile Include="Sesion.cs" />
-    <Compile Include="User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\domainEntities\domainEntities.csproj">
-      <Project>{d6893691-5585-40af-9556-73497985c0a8}</Project>
-      <Name>domainEntities</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\persistence\persistence.csproj">
-      <Project>{fd42daf4-1fd7-47ac-a37c-e36c1f8a4928}</Project>
-      <Name>persistence</Name>
+    <ProjectReference Include="..\WindowsFormsApp1\presentation.csproj">
+      <Project>{008b0c08-57ad-402b-acb2-af511166dfc1}</Project>
+      <Name>presentation</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

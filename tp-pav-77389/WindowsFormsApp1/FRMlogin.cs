@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using visnes;
+using visnes.exceptions;
 namespace WindowsFormsApp1
 {
     public partial class FRMlogin : Form
@@ -18,16 +19,53 @@ namespace WindowsFormsApp1
         }
         private void btnInit_clik(object sender, EventArgs e)
         {
-            UserManager u = new UserManager();
+            Role r;
             ItemCombo item = (ItemCombo)this.selectRol.SelectedItem;
             while (item == null)
             {
                 MessageBox.Show("debe seleccionar un rol", "seleccione rol", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 item = (ItemCombo)this.selectRol.SelectedItem;
+}
+            if (item.role.Equals(Role.Roles.MANAGER))
+            {
+                r = new LoggerManager();
+                try
+                {
+                    r.login(int.Parse(txtUser.Text), txtPasword.Text);
+                    new FRMManager();
+                }
+                catch(ObjectNotFoundException )
+                {
+                    MessageBox.Show("problema con el inicio de sesiòn", "fayo en el inicio d sesiòn", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+}
 
-            }
-            u.login(  int.Parse(this.txtUser.Text), this.txtPasword.Text, item.role);
-        }
+            if (item.role.Equals(Role.Roles.TEACHER))
+            {
+                r = new LoggerManager();
+                try
+                { 
+                    r.login(int.Parse(txtUser.Text), txtPasword.Text);
+                new FRMTeacher();
+}
+            catch (ObjectNotFoundException )
+                {
+                    MessageBox.Show("problema con el incio de sesión", "fayo de inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                r = new LoggerStudent();
+                try
+                {
+                    r.login(int.Parse(txtUser.Text), txtPasword.Text);
+                    new FRMStudent();
+                }
+                catch(ObjectNotFoundException )
+                {
+                    MessageBox.Show("problema con el inicio de sesión", "fayo en el inicio de sesìón", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+}
+
+}
         private void btnExit_clik(object sender, EventArgs e)
         {
             System.Environment.Exit(0);

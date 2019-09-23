@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using persistence;
 using domainEntities;
 using visnes.exceptions;
+
 namespace visnes
 {
      public class LoggerManager : Role
@@ -21,7 +22,7 @@ namespace visnes
             }
             if (manager.password.Equals(password))
             {
-                return new Sesion(new User(manager, Roles.MANAGER));
+                return new Sesion(new User(manager,Roles.MANAGER));
 }
             throw new ObjectNotFoundException();
 }

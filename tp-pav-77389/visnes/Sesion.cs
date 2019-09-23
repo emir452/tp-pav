@@ -9,7 +9,7 @@ namespace visnes
      public class Sesion
     {
          public User user { get; set;}
-        private DateTime date { get; }
+        private DateTime date { get;}
         public  Sesion(User user)
         {
             this.user = user;

@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FRMDeleteStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMDeleteStudent.Designer.cs">
+      <DependentUpon>FRMDeleteStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="FRMlogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +63,18 @@
     </Compile>
     <Compile Include="FRMManager.Designer.cs">
       <DependentUpon>FRMManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMModifiStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMModifiStudent.Designer.cs">
+      <DependentUpon>FRMModifiStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMRegisterStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMRegisterStudent.Designer.cs">
+      <DependentUpon>FRMRegisterStudent.cs</DependentUpon>
     </Compile>
     <Compile Include="FRMStudent.cs">
       <SubType>Form</SubType>
