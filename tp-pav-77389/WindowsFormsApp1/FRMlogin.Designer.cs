@@ -31,50 +31,116 @@
         {
             this.tlp = new System.Windows.Forms.TableLayoutPanel();
             this.lblUser = new System.Windows.Forms.Label();
-            lblUser.Text = "ingrese legajo";
             this.txtUser = new System.Windows.Forms.TextBox();
             this.lblPasword = new System.Windows.Forms.Label();
-            lblPasword.Text = "INGRESE CONTRASEÑA";
             this.txtPasword = new System.Windows.Forms.TextBox();
-            this.btnExit = new System.Windows.Forms.Button();
-            btnExit.Text = "salir";
-            btnExit.Click += new System.EventHandler(btnExit_clik);
-            this.btnInit = new System.Windows.Forms.Button();
-            btnInit.Text = "iniciar sesión";
-            btnInit.Click += new System.EventHandler(btnInit_clik);
-            this.tlp.Dock = DockStyle.Fill;
-
+            this.lblCombo = new System.Windows.Forms.Label();
             this.selectRol = new System.Windows.Forms.ComboBox();
-            this.fillCombo();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnInit = new System.Windows.Forms.Button();
             this.tlp.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // tlp
+            // 
             this.tlp.ColumnCount = 2;
             this.tlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlp.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
+            this.tlp.Controls.Add(this.lblUser, 0, 0);
+            this.tlp.Controls.Add(this.txtUser, 1, 0);
+            this.tlp.Controls.Add(this.lblPasword, 0, 1);
+            this.tlp.Controls.Add(this.txtPasword, 1, 1);
+            this.tlp.Controls.Add(this.lblCombo, 0, 2);
+            this.tlp.Controls.Add(this.selectRol, 1, 2);
+            this.tlp.Controls.Add(this.btnExit, 0, 3);
+            this.tlp.Controls.Add(this.btnInit, 1, 3);
+            this.tlp.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlp.Location = new System.Drawing.Point(0, 0);
+            this.tlp.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
+            this.tlp.Name = "tlp";
             this.tlp.RowCount = 4;
             this.tlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tlp.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tlp.Size = new System.Drawing.Size(800, 58);
             this.tlp.TabIndex = 0;
-
-            this.tlp.Controls.Add(this.lblUser, 0, 0);
-            this.tlp.Controls.Add(this.txtUser, 1, 0);
-            this.tlp.Controls.Add(this.lblPasword, 0, 1);
-            this.tlp.Controls.Add(this.txtPasword, 1, 1);
-            lblCombo = new Label();
-            lblCombo.Text = "seleccione rol";
-            this.tlp.Controls.Add(lblCombo, 0, 2);
-            this.tlp.Controls.Add(selectRol, 1,2);
-            this.tlp.Controls.Add(this.btnExit, 0, 3);
-            this.tlp.Controls.Add(this.btnInit, 1, 3);
-            
-            this.tlp.Location = new System.Drawing.Point(0, 0);
-            this.tlp.Name = "tlp";
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 100F);
+            // 
+            // lblUser
+            // 
+            this.lblUser.Location = new System.Drawing.Point(3, 0);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(44, 3);
+            this.lblUser.TabIndex = 0;
+            this.lblUser.Text = "ingrese legajo";
+            // 
+            // txtUser
+            // 
+            this.txtUser.Location = new System.Drawing.Point(203, 0);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(100, 20);
+            this.txtUser.TabIndex = 1;
+            // 
+            // lblPasword
+            // 
+            this.lblPasword.Location = new System.Drawing.Point(3, 14);
+            this.lblPasword.Name = "lblPasword";
+            this.lblPasword.Size = new System.Drawing.Size(44, 3);
+            this.lblPasword.TabIndex = 2;
+            this.lblPasword.Text = "INGRESE CONTRASEÑA";
+            // 
+            // txtPasword
+            // 
+            this.txtPasword.Location = new System.Drawing.Point(203, 14);
+            this.txtPasword.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
+            this.txtPasword.Name = "txtPasword";
+            this.txtPasword.Size = new System.Drawing.Size(100, 20);
+            this.txtPasword.TabIndex = 3;
+            // 
+            // lblCombo
+            // 
+            this.lblCombo.Location = new System.Drawing.Point(3, 28);
+            this.lblCombo.Name = "lblCombo";
+            this.lblCombo.Size = new System.Drawing.Size(44, 3);
+            this.lblCombo.TabIndex = 4;
+            this.lblCombo.Text = "seleccione rol";
+            // 
+            // selectRol
+            // 
+            this.selectRol.Location = new System.Drawing.Point(203, 28);
+            this.selectRol.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
+            this.selectRol.Name = "selectRol";
+            this.selectRol.Size = new System.Drawing.Size(121, 21);
+            this.selectRol.TabIndex = 5;
+            // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(3, 42);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(44, 2);
+            this.btnExit.TabIndex = 6;
+            this.btnExit.Text = "salir";
+            this.btnExit.Click += new System.EventHandler(this.btnExit_clik);
+            // 
+            // btnInit
+            // 
+            this.btnInit.Location = new System.Drawing.Point(203, 42);
+            this.btnInit.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
+            this.btnInit.Name = "btnInit";
+            this.btnInit.Size = new System.Drawing.Size(75, 2);
+            this.btnInit.TabIndex = 7;
+            this.btnInit.Text = "iniciar sesión";
+            this.btnInit.Click += new System.EventHandler(this.btnInit_clik);
+            // 
+            // FRMlogin
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 58);
             this.Controls.Add(this.tlp);
+            this.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
             this.Name = "FRMlogin";
             this.Text = "iniciar seción";
             this.Load += new System.EventHandler(this.FRMlogin_load);

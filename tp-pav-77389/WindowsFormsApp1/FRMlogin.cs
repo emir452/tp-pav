@@ -31,8 +31,9 @@ namespace WindowsFormsApp1
                 r = new LoggerManager();
                 try
                 {
-                    r.login(int.Parse(txtUser.Text), txtPasword.Text);
-                    new FRMManager();
+ Sesion                     s = r.login(int.Parse(txtUser.Text), txtPasword.Text);
+                    FRMManager window=  new FRMManager(new ManagerActiviti(s));
+                    window.ShowDialog();
                 }
                 catch(ObjectNotFoundException )
                 {

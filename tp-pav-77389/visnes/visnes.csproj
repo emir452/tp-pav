@@ -45,6 +45,7 @@
     <Compile Include="LoggerManager.cs" />
     <Compile Include="LoggerStudent.cs" />
     <Compile Include="LoggerTeacher.cs" />
+    <Compile Include="ManagerActiviti.cs" />
     <Compile Include="Role.cs" />
     <Compile Include="Sesion.cs" />
     <Compile Include="User.cs" />

@@ -18,6 +18,7 @@ namespace persistence
         }
         public void add(Manager manager)
         {
+
         }
         public Manager findById(int id)
         {

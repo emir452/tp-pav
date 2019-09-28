@@ -1,5 +1,5 @@
 ﻿using System.Windows.Forms;
-namespace WindowsFormsApp1
+namespace  WindowsFormsApp1 
 {
     partial class FRMManager
     {
@@ -51,8 +51,8 @@ namespace WindowsFormsApp1
         #endregion
         private TableLayoutPanel tlp;
         private MenuStrip menuContainer;
-        private    ToolStrip students;
+        private ToolStrip students;
         private ToolStrip teachers;
         // finaliza código 
-}
+    }
 }

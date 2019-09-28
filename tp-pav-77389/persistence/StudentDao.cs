@@ -3,45 +3,56 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 using domainEntities;
 
 
 namespace persistence
 {
     public class StudentDao : IDao<Student>
-{
+    {
         private DataBaseConnection connection;
         private ObjectBuilder builder;
-public StudentDao()
+        public StudentDao()
         {
             connection = DataBaseConnection.getInstance();
             builder = new ObjectBuilder();
-                }
+        }
         public void update(Student student)
         {
-}
-    
-    public void delete(int id)
-    {
+        }
 
+        public void delete(int id)
+        {
+            string sql = "delte from alumnos where id" + id;
+            connection.executeDml(sql);
+        }
+        public List<Student> selectAll()
+        {
+            String sql = "select* from alumnos";
+            ObjectBuilder builder = new ObjectBuilder();
+            List<Student> results = new List<Student>();
+            DataTable table = connection.executeQueri(sql);
+            foreach (DataRow i in table.Rows)
+            {
+                results.Add(builder.parseStudent(i));
+            }
+            return results;
+        }
+        public void add(Student student)
+        {
+
+            string sql = "insert into alumnos  values (@param1, @param2,@param3,@param4, @param5, @param6,@param7)";
+            Object[] array = new Object { student.name, student.surname, student.dni, student.virtDate, student.telephoneNmber, student.email, student.password };
+            connection.executeDml(sql, array);
+
+        }
+        public Student findById(int id)
+        {
+            String sql = "select * from alumnos a where a.id="+id;
+            return builder.parseStudent(connection.executeQueri(sql).Rows[0]);
+
+
+        }
     }
-    public List<Student> selectAll()
-    {
-    }
-    public void add(Student student)
-    {
-
-            string sql = "insert in to alumnos  values (@param1, @param2,@param3,@param4";
-            Object array = new object [ student.name, student.surname, student.dni, student.virtDate];
-            connection.executeQueri(sql, array);
-
-    }
-    public Student  findByID(int id)
-    {
-            String sql = "select * from alumnos a where a.id=@param1";
-            return builder.parseStudent(connection.executeQueri(sql, id));
-
-
-}
-}
 }

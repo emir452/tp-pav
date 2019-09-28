@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using visnes;
 namespace WindowsFormsApp1
 {
     public partial class FRMModifiStudent : Form
     {
-        public FRMModifiStudent()
+        private ManagerActiviti managerActiviti;
+         
+
+        public FRMModifiStudent(ManagerActiviti managerActiviti)
         {
             InitializeComponent();
+            this.managerActiviti = managerActiviti;
         }
     }
 }
