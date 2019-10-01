@@ -34,7 +34,8 @@ namespace WindowsFormsApp1
         }
         public void btnCancel_click(Object sender, EventArgs e)
         {
-           
+            this.Parent.Visible = true;  
+
 
         }
     }

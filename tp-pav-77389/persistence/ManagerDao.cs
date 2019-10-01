@@ -22,8 +22,8 @@ namespace persistence
         }
         public Manager findById(int id)
         {
-            String sql = "select * from administradores a where a.id=@param1";
-            return parser.parseManager(connection.executeQueri(sql, id).Rows[0]);
+            String sql = "select * from administradores a where a.id="+id;
+            return parser.parseManager(connection.executeQueri(sql).Rows[0]);
 
         }
         public List<Manager> selectAll()

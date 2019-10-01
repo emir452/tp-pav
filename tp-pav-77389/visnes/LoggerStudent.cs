@@ -14,7 +14,7 @@ namespace visnes
             public Sesion login(int id, String password)
         {
             StudentDao helper = new StudentDao();
-            Student student = helper.findByID(id);
+            Student student = helper.findById(id);
             if (student==null)
             {
                 throw new ObjectNotFoundException();
