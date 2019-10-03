@@ -29,12 +29,10 @@ public List<Teacher> selectAll()
             DataTable table = connection.executeQueri(sql);
             foreach (DataRow i  in table.Rows)
             {
-                results.Add(builder.parseTeacher(i));
+results.Add(builder.parseTeacher(i));
 }
             return results;
-            
-
-        }
+}
         public void update(Teacher teacher)
         {
        
@@ -46,8 +44,8 @@ public List<Teacher> selectAll()
              }
         public void add(Teacher teacher)
         {
-            string sql = "insert in to profesores   values (@param1, @param2,@param3,@param4,@param5,@param6@param7";
-            Object array = new object[teacher.name, teacher.surname, teacher.dni, teacher.virtDate, teacher.telephoneNmber, teacher.email, teacher.password];
+            string sql = "insert in to profesores   values (@param1, @param2,@param3,@param4,@param5,@param6,@param7";
+            Object array = new object[teacher.name, teacher.surname, teacher.dni, teacher.virtDate, teacher.telephoneNumber, teacher.email, teacher.password];
             connection.executeQueri(sql, array);
 }
     }

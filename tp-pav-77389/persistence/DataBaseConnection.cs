@@ -16,7 +16,8 @@ namespace persistence
         {
             connection = new SqlConnection();
             connection.ConnectionString = "Data Source=DESKTOP-HLQHQ7Q SQLEXPRESS;Initial Catalog=bd_alumnos;Integrated Security=True";
-
+            executor = new SqlCommand();
+            executor.Connection = connection;
         }
         public static DataBaseConnection getInstance()
         {

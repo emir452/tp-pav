@@ -48,7 +48,7 @@ public Student parseStudent(DataRow row)
             teacher.name=row[2].ToString();
             teacher.surname= row[3].ToString();
             teacher.dni= int.Parse(row[4].ToString());
-            teacher.telephoneNmber= int.Parse(row[5].ToString());
+            teacher.telephoneNumber= int.Parse(row[5].ToString());
             teacher.yearEntered = int.Parse(row[6].ToString());
             return teacher;
         }

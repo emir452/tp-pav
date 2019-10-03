@@ -74,8 +74,9 @@ tlp.RowStyles.Add(new RowStyle(SizeType.Percent, 25f));
                 {
                     managerActiviti.deleteStudent(found.id);
                 }
-                catch ()
+                catch (Exception )
                 {
+                    MessageBox.Show("no se pudo eliminar el estudiante", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
             }

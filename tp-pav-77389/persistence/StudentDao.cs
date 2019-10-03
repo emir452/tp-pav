@@ -20,6 +20,8 @@ namespace persistence
         }
         public void update(Student student)
         {
+            String sql = "update alumnos set nombre=" + student.name + ",apellido=" + student.surname + ", dni=" + student.dni.ToString() + ", telefono=" + student.telephoneNumber.ToString() + ",fechaNac=" + student.virtDate.ToString() + ",email" + student.email + ", password" + student.password;
+            connection.executeDml(sql);
         }
 
         public void delete(int id)
@@ -43,7 +45,7 @@ namespace persistence
         {
 
             string sql = "insert into alumnos  values (@param1, @param2,@param3,@param4, @param5, @param6,@param7)";
-            Object[] array = new Object { student.name, student.surname, student.dni, student.virtDate, student.telephoneNmber, student.email, student.password };
+            Object[] array = new Object[] { student.name, student.surname, student.dni, student.virtDate, student.telephoneNumber, student.email, student.password };
             connection.executeDml(sql, array);
 
         }

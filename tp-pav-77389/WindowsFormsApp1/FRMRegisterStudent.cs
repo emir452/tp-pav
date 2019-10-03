@@ -25,7 +25,7 @@ namespace WindowsFormsApp1
             student.name = txtName.Text;
             student.surname = txtSurName.Text;
             student.dni = int.Parse(txtDni.Text);
-            student.telephoneNmber = int.Parse(txtTelephone.Text);
+            student.telephoneNu mber = int.Parse(txtTelephone.Text);
             student.virtDate = DateTime.Parse(date.Text);
             student.email = txtEmail.Text;
             student.password = txtPassword.Text;

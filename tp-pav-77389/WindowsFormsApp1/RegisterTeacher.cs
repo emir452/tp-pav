@@ -12,7 +12,7 @@ namespace WindowsFormsApp1
 {
     public partial class RegisterTeacher : Form
     {
-        private ManagerActiviti managerActiviti ;
+        private ManagerActiviti  managerActiviti ;
         public RegisterTeacher(ManagerActiviti managerActiviti)
         {
             InitializeComponent();

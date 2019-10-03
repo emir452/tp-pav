@@ -13,7 +13,7 @@ namespace domainEntities
          public String surname { get; set; }
         public String email { get; set;}
         public DateTime virtDate { get; set;}
-        public int telephoneNmber { get; set;}
+        public int telephoneNumber { get; set;}
         public int dni { get; set;}
         public string password { get; set;} 
         public Boolean isHe(String name)

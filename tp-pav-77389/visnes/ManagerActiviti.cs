@@ -37,6 +37,12 @@ namespace visnes
                 throw new ObjectNotFoundException();
             }
         }
+        public void  updateStudent(Student s)
+        {
+
+            StudentDao updater = new StudentDao();
+            updater.update(s);
+        }
 
         public void registerTeacher(Teacher teacher)
         {
