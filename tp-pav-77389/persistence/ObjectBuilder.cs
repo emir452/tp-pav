@@ -23,36 +23,7 @@ public Student parseStudent(DataRow row)
             student.virtDate = DateTime.Parse(row[4].ToString());
             return student;
 }
-        public Manager parseManager(DataRow row)
-{
-            if (row==null)
-            {
-                return null;
-            }
-            Manager manager = new Manager();
-            manager.id = int.Parse(row[0].ToString());
-            manager.name = row[1].ToString();
-            manager.surname = row[2].ToString();
-            manager.email = row[3].ToString();
-            return manager;
-        }
-        public Teacher parseTeacher(DataRow row)
-{
-            if (row==null)
-            {
-                return null;
-            }
-            Teacher teacher = new Teacher();
-            teacher.id = int.Parse(row[0].ToString());
-            teacher.password= row[1].ToString();
-            teacher.name=row[2].ToString();
-            teacher.surname= row[3].ToString();
-            teacher.dni= int.Parse(row[4].ToString());
-            teacher.telephoneNumber= int.Parse(row[5].ToString());
-            teacher.yearEntered = int.Parse(row[6].ToString());
-            return teacher;
-        }
-
+        
       
     }
 }

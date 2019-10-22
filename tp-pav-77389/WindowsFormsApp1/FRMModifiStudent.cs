@@ -43,46 +43,42 @@ catch (ObjectNotFoundException)
             tlp.RowCount = 8;
             tlp.RowStyles.Clear();
             tlp.Controls.Clear();
-            tlp.RowStyles.Add(new RowStyle(SizeType.Percent, (100 / 8f)));
-            tlp.RowStyles.Add(new RowStyle(SizeType.Percent, (100 / 8f)));
-            tlp.RowStyles.Add(new RowStyle(SizeType.Percent, (100 / 8f)));
-            tlp.RowStyles.Add(new RowStyle(SizeType.Percent, (100 / 8f)));
-            tlp.RowStyles.Add(new RowStyle(SizeType.Percent, (100 / 8f)));
-            tlp.RowStyles.Add(new RowStyle(SizeType.Percent, (100 / 8f)));
-            tlp.RowStyles.Add(new RowStyle(SizeType.Percent, (100 / 8f)));
-            tlp.RowStyles.Add(new RowStyle(SizeType.Percent, (100 / 8f)));
-
-            Label lblInformationName = new Label();
+            for (int i = 0; i < 8; i++)
+            {
+                tlp.RowStyles.Add(new RowStyle(SizeType.Percent, (100 / 8f)));
+}
+            lblInformationName = new Label();
             lblInformationName.Text = "nombre";
-            TextBox txtName = new TextBox();
+            txtName = new TextBox();
             txtName.Text = found.name;
-            Label lblInformationSurname = new Label();
+            lblInformationSurname = new Label();
             lblInformationSurname.Text = "apellido";
-            TextBox txtSurName = new TextBox();
+            txtSurName = new TextBox();
             txtSurName.Text = found.surname;
-            Label lblInformationDni = new Label();
+            lblInformationDni = new Label();
             lblInformationDni.Text = "DNI";
-            TextBox txtDni = new TextBox();
-            txtDni.Text = found.dni.ToString(); ;
-            Label lblInformationTelephone = new Label();
+            txtDni = new TextBox();
+            txtDni.Text = found.dni.ToString();
+            lblInformationTelephone = new Label();
             lblInformationTelephone.Text = "teléfono";
-            TextBox txtTelephone = new TextBox();
+            txtTelephone = new TextBox();
             txtTelephone.Text = found.telephoneNumber.ToString();
-            Label lblInformationVirtDate = new Label();
+            lblInformationVirtDate = new Label();
             lblInformationVirtDate.Text = "fecha de nacimiento";
-            DateTimePicker pickerVirtDate = new DateTimePicker();
+            pickerVirtDate = new DateTimePicker();
             pickerVirtDate.Value = found.virtDate;
-            Label lblInformationEmail = new Label();
+            lblInformationEmail = new Label();
             lblInformationEmail.Text = "email";
-            TextBox txtEmail = new TextBox();
+            txtEmail = new TextBox();
             txtEmail.Text = found.email;
-            Label lblInformationPassword = new Label();
-            TextBox txtPassword = new TextBox();
+            lblInformationPassword = new Label();
+            lblInformationPassword.Text = "contraseña";
+            txtPassword = new TextBox();
             txtPassword.Text = found.password;
-            Button btnCancelUpdating = new Button();
-            btnCancelUpdating.Text = "calcelar la actualización";
-            btnCancelUpdating.Click += new EventHandler(btnCancelUpdating_click);
-            Button btnUpdate = new Button();
+            btnCancelUpdating = new Button();
+            btnCancelUpdating.Text = "cancelar actualización";
+            btnCancel.Click += new EventHandler(btnCancelUpdating_click);
+            btnUpdate = new Button();
             btnUpdate.Text = "actualizar";
             btnUpdate.Click += new EventHandler(btnUpdate_click);
             tlp.Controls.Add(lblInformationName, 0, 0);
@@ -100,7 +96,7 @@ catch (ObjectNotFoundException)
             tlp.Controls.Add(lblInformationPassword, 0, 6);
             tlp.Controls.Add(txtPassword, 1, 6);
             tlp.Controls.Add(btnCancelUpdating, 0, 7);
-            tlp.Controls.Add(btnUpdate, 1, 7);
+            tlp.Controls.Add(btnUpdate, 1, 7);  
 }
         private void btnCancelUpdating_click(Object sender, EventArgs e)
         {
@@ -109,7 +105,22 @@ catch (ObjectNotFoundException)
         }
         private void btnUpdate_click(Object sender, EventArgs e)
         {
+            found.name = txtName.Text;
+            found.surname = txtSurName.Text;
+            found.dni = int.Parse(txtDni.Text);
+            found.virtDate = pickerVirtDate.Value;
+            found.email = txtEmail.Text;
+            found.password = txtPassword.Text;
+            try
+            {
+                managerActiviti.updateStudent(found);
+            }
+            catch ( ImposibleUpdateException )
+            {
+                MessageBox.Show("problemas en la actualización", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
-        }
+}
+        
     }
 }

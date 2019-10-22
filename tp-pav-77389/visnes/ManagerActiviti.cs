@@ -37,11 +37,18 @@ namespace visnes
                 throw new ObjectNotFoundException();
             }
         }
-        public void  updateStudent(Student s)
+        public void updateStudent(Student s)
         {
 
             StudentDao updater = new StudentDao();
+            try
+            { 
             updater.update(s);
+        }
+            catch (Exception)
+            {
+                throw new ImposibleUpdateException();
+            }
         }
 
         public void registerTeacher(Teacher teacher)
@@ -49,7 +56,7 @@ namespace visnes
             TeacherDao logger = new TeacherDao();
             logger.add(teacher);
         }
-        public  void eleteTeacher(int id)
+        public  void deleteTeacher(int id)
         {
             TeacherDao helper = new TeacherDao();
             helper.delete(id);

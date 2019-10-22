@@ -20,7 +20,7 @@ namespace WindowsFormsApp1
             this.ManagerActiviti = managerActiviti;
         }
         public void btnRegisterStudent_click(object sender, EventArgs e)
-        {
+        {   
             Student student = new Student();
             student.name = txtName.Text;
             student.surname = txtSurName.Text;

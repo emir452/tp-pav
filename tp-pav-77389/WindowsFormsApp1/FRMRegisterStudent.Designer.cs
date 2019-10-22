@@ -38,8 +38,9 @@ namespace WindowsFormsApp1
             txtName = new TextBox();
             lblSurName = new Label();
             lblSurName.Text = "ingrese apellido";
+            txtSurName = new TextBox();
             lblDni = new Label();
-            lblDni.Text = "ingrese edni";
+            lblDni.Text = "ingrese el dni";
             txtDni = new TextBox();
             lblTelephone = new Label();
             lblTelephone.Text = "ingrese telefono";
@@ -58,19 +59,15 @@ namespace WindowsFormsApp1
             register.Click += new System.EventHandler(btnRegisterStudent_click); 
             cancel = new Button();
             cancel.Text = "cncelar";
-
+            cancel.Click += new System.EventHandler(btnCancel_click); 
             // organizando los controles en la ventana 
             tlp = new TableLayoutPanel();
             tlp.ColumnCount = 2;
             tlp.RowCount = 8;
-            tlp.RowStyles.Add(new RowStyle(SizeType.Percent,(100/8)));
-            tlp.RowStyles.Add(new RowStyle(SizeType.Percent, (100 / 8)));
-            tlp.RowStyles.Add(new RowStyle(SizeType.Percent, (100 / 8)));
-            tlp.RowStyles.Add(new RowStyle(SizeType.Percent, (100 / 8)));
-            tlp.RowStyles.Add(new RowStyle(SizeType.Percent, (100 / 8)));
-            tlp.RowStyles.Add(new RowStyle(SizeType.Percent, (100 / 8)));
-            tlp.RowStyles.Add(new RowStyle(SizeType.Percent, (100 / 8)));
-            tlp.RowStyles.Add(new RowStyle(SizeType.Percent, (100 / 8)));
+            for (int i = 0; i < 8; i++)
+            {
+                tlp.RowStyles.Add(new RowStyle(SizeType.Percent, (100 / 8)));
+}
 tlp.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25f));
             tlp.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 75f));
             tlp.Controls.Add(lblName, 0, 0);

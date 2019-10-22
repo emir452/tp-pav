@@ -5,17 +5,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using domainEntities;
+using entity_builder;    
+
 namespace persistence
 {
     public class ManagerDao : IDao<Manager>
     {
         private DataBaseConnection connection;
-        private ObjectBuilder parser;
+        private ManagerBuilder parser;
         public ManagerDao()
         {
             connection = DataBaseConnection.getInstance();
-            parser = new ObjectBuilder();
-        }
+            parser = new ManagerBuilder();
+           
+             }
         public void add(Manager manager)
         {
 

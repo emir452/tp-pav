@@ -70,6 +70,10 @@
       <Project>{d6893691-5585-40af-9556-73497985c0a8}</Project>
       <Name>domainEntities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\entity builder\entity builder.csproj">
+      <Project>{798da4ea-534d-48a3-891d-d97f0b5f11a1}</Project>
+      <Name>entity builder</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

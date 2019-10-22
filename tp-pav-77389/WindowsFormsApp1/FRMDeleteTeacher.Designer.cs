@@ -1,6 +1,7 @@
-﻿namespace WindowsFormsApp1
+﻿using System.Windows.Forms;
+namespace WindowsFormsApp1
 {
-    partial class RegisterTeacher
+    partial class FRMDeleteTeacher
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +32,8 @@
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "RegisterTeacher";
+            this.Text = "FRMDeleteTeacher";
+            this.Load += new System.EventHandler(FRMDeleteTeacher_load);
         }
 
         #endregion

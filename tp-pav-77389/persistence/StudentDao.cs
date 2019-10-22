@@ -26,7 +26,7 @@ namespace persistence
 
         public void delete(int id)
         {
-            string sql = "delte from alumnos where id" + id;
+            string sql = "delete from alumnos where id" + id;
             connection.executeDml(sql);
         }
         public List<Student> selectAll()

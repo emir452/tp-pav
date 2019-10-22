@@ -5,16 +5,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using domainEntities;
+using entity_builder;
 namespace persistence
 {
     public  class TeacherDao : IDao<Teacher>
     {
         private DataBaseConnection connection;
-        private ObjectBuilder builder;
+        private TeacherBuilder builder;
         public TeacherDao()
         {
             connection = DataBaseConnection.getInstance();
-            builder= new ObjectBuilder();
+            builder= new TeacherBuilder();
             
         }
     public Teacher findById(int id)
@@ -29,7 +30,7 @@ public List<Teacher> selectAll()
             DataTable table = connection.executeQueri(sql);
             foreach (DataRow i  in table.Rows)
             {
-results.Add(builder.parseTeacher(i));
+                results.Add(builder.parseTeacher(i));
 }
             return results;
 }
@@ -45,7 +46,7 @@ results.Add(builder.parseTeacher(i));
         public void add(Teacher teacher)
         {
             string sql = "insert in to profesores   values (@param1, @param2,@param3,@param4,@param5,@param6,@param7";
-            Object array = new object[teacher.name, teacher.surname, teacher.dni, teacher.virtDate, teacher.telephoneNumber, teacher.email, teacher.password];
+            Object[] array = new object[] { teacher.name, teacher.surname, teacher.dni, teacher.virtDate, teacher.telephoneNumber, teacher.email, teacher.password };
             connection.executeQueri(sql, array);
 }
     }

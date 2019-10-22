@@ -62,6 +62,23 @@ namespace WindowsFormsApp1
         private TextBox txtId;
         private Button btnCancel;
         private Button btnSearch;
+        private Label lblInformationName;
+            private TextBox txtName;
+        private Label lblInformationSurname;
+        private TextBox txtSurName;
+        private Label lblInformationDni;
+        private TextBox txtDni;
+        private Label lblInformationTelephone;
+        private TextBox txtTelephone;
+        private Label lblInformationVirtDate;
+        private DateTimePicker pickerVirtDate;
+        private Label lblInformationEmail;
+        private TextBox txtEmail;
+        private Label lblInformationPassword;
+        private TextBox txtPassword;
+        private Button btnCancelUpdating;
+        private Button btnUpdate;
+
     }
    
 }
