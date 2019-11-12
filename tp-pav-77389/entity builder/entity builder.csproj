@@ -45,6 +45,7 @@
     <Compile Include="ManagerBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TeacherBuilder.cs" />
+    <Compile Include="TemeBuilder.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\domainEntities\domainEntities.csproj">

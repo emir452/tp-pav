@@ -33,7 +33,7 @@ namespace WindowsFormsApp1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Text = "FRMDeleteTeacher";
-            this.Load += new System.EventHandler(FRMDeleteTeacher_load);
+            this.Load += new System.EventHandler(FRMDeleteTeacher_load);    
         }
 
         #endregion

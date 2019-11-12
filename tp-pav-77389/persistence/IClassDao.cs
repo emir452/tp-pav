@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-namespace domainEntities
+using domainEntities;
+namespace persistence
 {
- public class Student 
+     public interface IClassDao
     {
-        public Person personalData { get; set;}
+        void registerClass(Class c);
+
 
     }
 }

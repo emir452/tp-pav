@@ -1,7 +1,7 @@
 ﻿using System.Windows.Forms;
 namespace WindowsFormsApp1
 {
-    partial class FRMTeacher
+    partial class FRMRegisterClas
     {
         /// <summary>
         /// Required designer variable.
@@ -32,18 +32,33 @@ namespace WindowsFormsApp1
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FRMTeacher";
+            this.Text = "registrar clase ";
             view = new ListBox();
-                view.Dock = DockStyle.Fill;
-            btnRegisterClas = new Button();
-            btnRegisterClas.Text = "registrar nueva clase";
-            btnRegisterClas.Click += new System.EventHandler(btnRegisterClass_click);
-this.Controls.Add(view);
-                // termina 
+            view.Dock = DockStyle.Fill;
+            txtIdStudent = new TextBox();
+            txtIdStudent.KeyPress += new KeyPressEventHandler(txtIdStudent_keyPress);
+            txtCalification = new TextBox();
+            txtCalification.KeyPress += new KeyPressEventHandler(txtCalification_keyPress);
+            txtObservations = new TextBox();
+            txtObservations.MaxLength = 200;
+            cboTeme = new ComboBox();
+            btnRegisterClass = new Button();
+            btnRegisterClass.Text = "egistrar clase";
+            btnRegisterClass.Click += new System.EventHandler(btnRegisterClass_click);
+            view.Controls.Add(txtIdStudent);
+            view.Controls.Add(txtCalification);
+            view.Controls.Add(txtObservations);
+            this.Controls.Add(view);
+            // termina 
         }
 
         #endregion
         private ListBox view;
-        private Button btnRegisterClas;
+
+        private TextBox  txtIdStudent;
+        private ComboBox cboTeme;
+        private TextBox txtCalification;
+        private TextBox txtObservations;
+        private Button btnRegisterClass;
     }
 }

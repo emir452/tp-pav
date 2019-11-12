@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 using System.Data;
 namespace persistence
 {
-    public class DataBaseConnection
+    public class DataBaseConnection : IDatabaseConnection
     {
         private static DataBaseConnection instance = new DataBaseConnection();
         private SqlCommand executor;
@@ -77,6 +77,27 @@ public DataTable executeQueri(String sql)
             this.closeConnection();
             return table;
         }
+        public Boolean  executeTransaction(List<String> commands)
+        {
+            this.openConnection(); 
+            SqlTransaction t = connection.BeginTransaction();
+            foreach (String i in commands) 
+            {
+                try
+                {
+                    executor.CommandText = i;
+                executor.ExecuteNonQuery();
+                    }
+                catch( Exception )
+                {
+                    this.closeConnection();
+                    return false;
+}
+}
+t.Commit();
+            this.closeConnection();
+            return true;
+}
         private void openConnection()
         {
             try
@@ -90,6 +111,7 @@ public DataTable executeQueri(String sql)
                 throw e;
             }
         }
+
         private void closeConnection()
         {
             connection.Close();

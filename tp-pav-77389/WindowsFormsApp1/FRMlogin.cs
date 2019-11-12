@@ -43,13 +43,15 @@ namespace WindowsFormsApp1
 
             if (item.role.Equals(Role.Roles.TEACHER))
             {
-                r = new LoggerManager();
+                LoggerTeacher logger = new LoggerTeacher();
+                
                 try
-                { 
-                    r.login(int.Parse(txtUser.Text), txtPasword.Text);
-                new FRMTeacher();
-}
-            catch (ObjectNotFoundException )
+                {
+                    Sesion s = logger.login(int.Parse(txtUser.Text), txtPasword.Text);
+                    FRMTeacher fRM = new FRMTeacher(new TeacherActiviti(s));
+
+                }
+                catch (ObjectNotFoundException )
                 {
                     MessageBox.Show("problema con el incio de sesión", "fayo de inicio de sesión", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

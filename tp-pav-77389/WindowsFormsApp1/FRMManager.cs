@@ -25,22 +25,31 @@ namespace     WindowsFormsApp1
 }
         private void itemModifiStudent_click(Object sender, EventArgs e)
         {
+            new FRMModifiStudent(managerActiviti).ShowDialog();
 
 }
         private void itemDeleteStudent_click(object sender, EventArgs e)
         {
+            new FRMDeleteStudent(managerActiviti).ShowDialog();
 
         }
         private void itemRegisterTeacher_click(object sender, EventArgs e)
 {
+            new FRMRegisterTeacher(managerActiviti).ShowDialog();
 }
         private void itemModifiTeacher_click(object sender, EventArgs e)
 {
+            
 
 }
         private void itemDeleteTeacher_Click(object sender, EventArgs e)
         {
+            new FRMDeleteTeacher( managerActiviti).ShowDialog();
         }
+        private void itemRegisterTeme_click( object sender, EventArgs e)
+        {
+            new FRMRegisterTeme().ShowDialog();
+}
 
     }
 }

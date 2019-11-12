@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{008B0C08-57AD-402B-ACB2-AF511166DFC1}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WindowsFormsApp1</RootNamespace>
+    <RootNamespace>presentation</RootNamespace>
     <AssemblyName>WindowsFormsApp1</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -76,6 +76,12 @@
     <Compile Include="FRMModifiStudent.Designer.cs">
       <DependentUpon>FRMModifiStudent.cs</DependentUpon>
     </Compile>
+    <Compile Include="FRMRegisterClas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMRegisterClas.Designer.cs">
+      <DependentUpon>FRMRegisterClas.cs</DependentUpon>
+    </Compile>
     <Compile Include="FRMRegisterStudent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,12 @@
     </Compile>
     <Compile Include="FRMRegisterTeacher.Designer.cs">
       <DependentUpon>FRMRegisterTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMRegisterTeme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMRegisterTeme.Designer.cs">
+      <DependentUpon>FRMRegisterTeme.cs</DependentUpon>
     </Compile>
     <Compile Include="FRMStudent.cs">
       <SubType>Form</SubType>
@@ -114,6 +126,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

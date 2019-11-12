@@ -10,11 +10,10 @@ namespace domainEntities
     {
         public Teacher teacher { get; set;}
         public Student student { get; set; }
-        private List<DetailClass> detailClass;
+        public Teme teme { get; set; }
         public DateTime date { get; set; }
         public Class(Teacher teacher, Student student)
         {
-            detailClass = new List<DetailClass>();
             this.teacher = teacher;
             this.student = student;
             date = DateTime.Now;

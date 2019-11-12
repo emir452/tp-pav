@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace domainEntities
 {
-    public class Teacher :Person
+    public class Teacher 
     {
         public int yearEntered { get; set;} 
+         public  Person personalData { get; set;}
        
     }
 }

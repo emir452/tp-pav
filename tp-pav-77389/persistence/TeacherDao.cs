@@ -10,7 +10,7 @@ namespace persistence
 {
     public  class TeacherDao : IDao<Teacher>
     {
-        private DataBaseConnection connection;
+         private IDatabaseConnection connection;
         private TeacherBuilder builder;
         public TeacherDao()
         {
@@ -25,7 +25,7 @@ namespace persistence
 }
 public List<Teacher> selectAll()
         {
-            List<Teacher> results;
+            List<Teacher> results = new List<Teacher>();
             String sql = "select * from profesores";
             DataTable table = connection.executeQueri(sql);
             foreach (DataRow i  in table.Rows)
@@ -46,7 +46,7 @@ public List<Teacher> selectAll()
         public void add(Teacher teacher)
         {
             string sql = "insert in to profesores   values (@param1, @param2,@param3,@param4,@param5,@param6,@param7";
-            Object[] array = new object[] { teacher.name, teacher.surname, teacher.dni, teacher.virtDate, teacher.telephoneNumber, teacher.email, teacher.password };
+            Object[] array = new object[] { teacher.personalData.name, teacher.personalData.surname, teacher.personalData.dni, teacher.personalData.virtDate, teacher.personalData.telephoneNumber, teacher.personalData.email, teacher.personalData.password };
             connection.executeQueri(sql, array);
 }
     }

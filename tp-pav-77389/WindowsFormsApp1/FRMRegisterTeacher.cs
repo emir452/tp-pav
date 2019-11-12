@@ -23,7 +23,7 @@ namespace WindowsFormsApp1
         {
             Teacher teacher = new Teacher();
             teacher.name = txtName.Text;
-            teacher.surname = txtSurName;
+            teacher.surname = txtSurName.Text;
             teacher.dni = int.Parse(txtDni.Text.ToString());
             teacher.virtDate = pickerVirDate.Value;
             teacher.telephoneNumber = int.Parse(txtTelephone.Text);

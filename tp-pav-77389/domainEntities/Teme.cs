@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace domainEntities
 {
-    class Teme
+     public class Teme
     {
+        public int id { get; set;}
         public   String name { get; set;}
         public String description { get; set;}
-        public Teme(String name, String description)
+        public Teme( int id, String name, String description)
         {
+            this.id = id;
             this.name = name;
             this.description = description;
         }

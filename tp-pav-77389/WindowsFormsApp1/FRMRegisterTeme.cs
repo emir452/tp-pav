@@ -7,22 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using domainEntities;
-using visnes;
+
 namespace WindowsFormsApp1
 {
-    public partial class FRMTeacher : Form
+    public partial class FRMRegisterTeme : Form
     {
-        private TeacherActiviti teacherActiviti; 
-        public FRMTeacher( TeacherActiviti teacherActiviti)
+        public FRMRegisterTeme()
         {
             InitializeComponent();
-            this.teacherActiviti = teacherActiviti;
         }
-        private void  btnRegisterClass_click(object sender, EventArgs e)
+        private void btnRegisterTeme_click(Object sender, EventArgs e)
         {
 
-
+        }
+        private void btnCancel_click(Object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

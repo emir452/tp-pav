@@ -16,12 +16,12 @@ namespace entity_builder
                 return null;
             }
             Teacher teacher = new Teacher();
-            teacher.id = int.Parse(row[0].ToString());
-            teacher.password = row[1].ToString();
-            teacher.name = row[2].ToString();
-            teacher.surname = row[3].ToString();
-            teacher.dni = int.Parse(row[4].ToString());
-            teacher.telephoneNumber = int.Parse(row[5].ToString());
+            teacher.personalData.id = int.Parse(row[0].ToString());
+            teacher.personalData.password = row[1].ToString();
+            teacher.personalData.name = row[2].ToString();
+            teacher.personalData.surname = row[3].ToString();
+            teacher.personalData.dni = int.Parse(row[4].ToString());
+            teacher.personalData.telephoneNumber = int.Parse(row[5].ToString());
             teacher.yearEntered = int.Parse(row[6].ToString());
             return teacher;
         }
