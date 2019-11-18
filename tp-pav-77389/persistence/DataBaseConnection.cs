@@ -90,6 +90,7 @@ public DataTable executeQueri(String sql)
                     }
                 catch( Exception )
                 {
+                    t.Rollback();
                     this.closeConnection();
                     return false;
 }

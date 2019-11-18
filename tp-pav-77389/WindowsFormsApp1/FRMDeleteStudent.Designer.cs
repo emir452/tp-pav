@@ -1,5 +1,5 @@
 ﻿using System.Windows.Forms;
-namespace WindowsFormsApp1
+namespace presentation
 {
     partial class FRMDeleteStudent
     {
@@ -50,7 +50,7 @@ namespace WindowsFormsApp1
             btnSearch.Text = "buscar";
             btnSearch.Click += new System.EventHandler(btnSearch_click);
             this.ResumeLayout(false);
-            
+
         }
 
         #endregion
@@ -66,6 +66,6 @@ namespace WindowsFormsApp1
         private Label lblDni;
         private Label lblInformationDni;
         private Button btnDeleteStudent;
-           
+
     }
 }

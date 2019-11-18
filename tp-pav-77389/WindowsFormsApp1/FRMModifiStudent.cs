@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using visnes;
 using visnes.exceptions;
 using domainEntities;
-namespace WindowsFormsApp1
+namespace  presentation
 {
     public partial class FRMModifiStudent : Form
     {
@@ -50,31 +50,31 @@ catch (ObjectNotFoundException)
             lblInformationName = new Label();
             lblInformationName.Text = "nombre";
             txtName = new TextBox();
-            txtName.Text = found.name;
+            txtName.Text = found.personalData.name;
             lblInformationSurname = new Label();
             lblInformationSurname.Text = "apellido";
             txtSurName = new TextBox();
-            txtSurName.Text = found.surname;
+            txtSurName.Text = found.personalData.surname;
             lblInformationDni = new Label();
             lblInformationDni.Text = "DNI";
             txtDni = new TextBox();
-            txtDni.Text = found.dni.ToString();
+            txtDni.Text = found.personalData.dni.ToString();
             lblInformationTelephone = new Label();
             lblInformationTelephone.Text = "teléfono";
             txtTelephone = new TextBox();
-            txtTelephone.Text = found.telephoneNumber.ToString();
+            txtTelephone.Text = found.personalData.telephoneNumber.ToString();
             lblInformationVirtDate = new Label();
             lblInformationVirtDate.Text = "fecha de nacimiento";
             pickerVirtDate = new DateTimePicker();
-            pickerVirtDate.Value = found.virtDate;
+            pickerVirtDate.Value = found.personalData.virtDate;
             lblInformationEmail = new Label();
             lblInformationEmail.Text = "email";
             txtEmail = new TextBox();
-            txtEmail.Text = found.email;
+            txtEmail.Text = found.personalData.email;
             lblInformationPassword = new Label();
             lblInformationPassword.Text = "contraseña";
             txtPassword = new TextBox();
-            txtPassword.Text = found.password;
+            txtPassword.Text = found.personalData.password;
             btnCancelUpdating = new Button();
             btnCancelUpdating.Text = "cancelar actualización";
             btnCancel.Click += new EventHandler(btnCancelUpdating_click);
@@ -105,12 +105,12 @@ catch (ObjectNotFoundException)
         }
         private void btnUpdate_click(Object sender, EventArgs e)
         {
-            found.name = txtName.Text;
-            found.surname = txtSurName.Text;
-            found.dni = int.Parse(txtDni.Text);
-            found.virtDate = pickerVirtDate.Value;
-            found.email = txtEmail.Text;
-            found.password = txtPassword.Text;
+            found.personalData.name = txtName.Text;
+            found.personalData.surname = txtSurName.Text;
+            found.personalData.dni = int.Parse(txtDni.Text);
+            found.personalData.virtDate = pickerVirtDate.Value;
+            found.personalData.email = txtEmail.Text;
+            found.personalData.password = txtPassword.Text;
             try
             {
                 managerActiviti.updateStudent(found);

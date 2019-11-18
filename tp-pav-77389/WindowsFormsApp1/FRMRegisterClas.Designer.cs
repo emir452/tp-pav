@@ -1,5 +1,5 @@
 ﻿using System.Windows.Forms;
-namespace WindowsFormsApp1
+namespace presentation
 {
     partial class FRMRegisterClas
     {
@@ -55,7 +55,7 @@ namespace WindowsFormsApp1
         #endregion
         private ListBox view;
 
-        private TextBox  txtIdStudent;
+        private TextBox txtIdStudent;
         private ComboBox cboTeme;
         private TextBox txtCalification;
         private TextBox txtObservations;

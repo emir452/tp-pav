@@ -17,7 +17,10 @@ namespace persistence
 }
         public void registerClass(Class c)
         {
-            String sql= "insert into clases values "
+            String sql = "insert into clases values" + c.student.personalData.id.ToString() + ", " + c.teacher.personalData.id.ToString() + ", " + c.teme.id.ToString() + ", " + c.date.ToString() + ", " + c.calification.ToString() + ", " + c.observations;
+            List<String> l = new List<string>();
+            l.Add(sql);
+            connection.executeTransaction(l);
 
 }
     }

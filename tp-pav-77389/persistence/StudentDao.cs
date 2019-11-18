@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using domainEntities;
+using entity_builder;
 
 
 namespace persistence
@@ -12,11 +13,11 @@ namespace persistence
     public class StudentDao : IDao<Student>
     {
         private DataBaseConnection connection;
-        private ObjectBuilder builder;
+        private  BuilderStudent builder;
         public StudentDao()
         {
             connection = DataBaseConnection.getInstance();
-            builder = new ObjectBuilder();
+            builder = new  BuilderStudent();
         }
         public void update(Student student)
         {
@@ -32,12 +33,11 @@ namespace persistence
         public List<Student> selectAll()
         {
             String sql = "select* from alumnos";
-            ObjectBuilder builder = new ObjectBuilder();
             List<Student> results = new List<Student>();
             DataTable table = connection.executeQueri(sql);
             foreach (DataRow i in table.Rows)
             {
-                results.Add(builder.parseStudent(i));
+                results.Add(builder.createStudent(i));
             }
             return results;
         }
@@ -52,7 +52,7 @@ namespace persistence
         public Student findById(int id)
         {
             String sql = "select * from alumnos a where a.id="+id;
-            return builder.parseStudent(connection.executeQueri(sql).Rows[0]);
+            return builder.createStudent(connection.executeQueri(sql).Rows[0]);
 
 
         }

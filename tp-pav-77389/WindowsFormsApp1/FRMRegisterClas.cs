@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using domainEntities;
 using visnes;
-namespace WindowsFormsApp1
+namespace  presentation 
 {
     public partial class FRMRegisterClas : Form
     {
@@ -42,7 +42,19 @@ namespace WindowsFormsApp1
 
             Class c = new Class(t, teacherActiviti.findStudentById(int.Parse(txtIdStudent.Text)));
             c.teme = new TemeService().findById(int.Parse(cboTeme.SelectedValue.ToString()));
-            
+            c.calification = float.Parse(txtCalification.Text);
+            c.observations = txtObservations.Text;
+            try
+            { 
+            teacherActiviti.registerClass(c);
+                MessageBox.Show("clase registrada con éxito", "registro exitóso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("eror en el registro de la clase, por favor, inténtelo de nuevo", "error en el registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+
+            }
            
             
         }

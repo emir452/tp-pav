@@ -1,5 +1,5 @@
 ﻿using System.Windows.Forms;
-namespace  WindowsFormsApp1 
+namespace presentation
 {
     partial class FRMManager
     {
@@ -53,7 +53,7 @@ namespace  WindowsFormsApp1
             menuContainer.Container.Add(temes);
             this.Controls.Add(menuContainer);
 
-             }
+        }
 
         #endregion
         private TableLayoutPanel tlp;

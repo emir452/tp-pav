@@ -47,8 +47,10 @@
     <Compile Include="LoggerStudent.cs" />
     <Compile Include="LoggerTeacher.cs" />
     <Compile Include="ManagerActiviti.cs" />
+    <Compile Include="ReportService.cs" />
     <Compile Include="Role.cs" />
     <Compile Include="Sesion.cs" />
+    <Compile Include="SimpleStudentReportBuilder.cs" />
     <Compile Include="TeacherActiviti.cs" />
     <Compile Include="TemeService.cs" />
     <Compile Include="User.cs" />
@@ -62,6 +64,10 @@
     <ProjectReference Include="..\persistence\persistence.csproj">
       <Project>{fd42daf4-1fd7-47ac-a37c-e36c1f8a4928}</Project>
       <Name>persistence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\reports\reports.csproj">
+      <Project>{6dd1a096-ba1f-4113-83da-2d09d9418f77}</Project>
+      <Name>reports</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using domainEntities;
 using visnes;
-namespace WindowsFormsApp1
+namespace  presentation
 {
     public partial class FRMTeacher : Form
     {
         private TeacherActiviti teacherActiviti; 
-        public FRMTeacher( TeacherActiviti teacherActiviti)
+        public FRMTeacher(TeacherActiviti teacherActiviti)
         {
             InitializeComponent();
             this.teacherActiviti = teacherActiviti;

@@ -12,6 +12,8 @@ namespace domainEntities
         public Student student { get; set; }
         public Teme teme { get; set; }
         public DateTime date { get; set; }
+        public float calification { get; set;} 
+        public String observations { get; set;}
         public Class(Teacher teacher, Student student)
         {
             this.teacher = teacher;

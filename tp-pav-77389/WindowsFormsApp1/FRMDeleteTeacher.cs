@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using visnes;
-namespace WindowsFormsApp1
+namespace  presentation
 {
     public partial class FRMDeleteTeacher : Form
     {

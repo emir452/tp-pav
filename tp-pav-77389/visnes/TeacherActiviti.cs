@@ -19,8 +19,10 @@ namespace visnes
         {
             return new StudentDao().findById(id);
 }
-        public void registerClass(Class c)
+        public  void registerClass(Class c)
         {
+            IClassDao dao = new ClassDao();
+            dao.registerClass(c);
 
 
         }

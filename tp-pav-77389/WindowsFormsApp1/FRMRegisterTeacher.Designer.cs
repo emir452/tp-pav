@@ -1,5 +1,5 @@
 ﻿using System.Windows.Forms;
-namespace WindowsFormsApp1
+namespace  presentation 
 {
     partial class FRMRegisterTeacher
     {

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using visnes;
 using domainEntities;
-namespace WindowsFormsApp1
+namespace  presentation 
 {
     public partial class FRMRegisterStudent : Form
     {
@@ -22,13 +22,13 @@ namespace WindowsFormsApp1
         public void btnRegisterStudent_click(object sender, EventArgs e)
         {   
             Student student = new Student();
-            student.name = txtName.Text;
-            student.surname = txtSurName.Text;
-            student.dni = int.Parse(txtDni.Text);
-            student.telephoneNu mber = int.Parse(txtTelephone.Text);
-            student.virtDate = DateTime.Parse(date.Text);
-            student.email = txtEmail.Text;
-            student.password = txtPassword.Text;
+            student.personalData.name = txtName.Text;
+            student.personalData.surname = txtSurName.Text;
+            student.personalData.dni = int.Parse(txtDni.Text);
+            student.personalData.telephoneNumber= int.Parse(txtTelephone.Text);
+            student.personalData.virtDate = DateTime.Parse(date.Text);
+            student.personalData.email = txtEmail.Text;
+            student.personalData.password = txtPassword.Text;
             ManagerActiviti.registerStudent(student);
 
         }

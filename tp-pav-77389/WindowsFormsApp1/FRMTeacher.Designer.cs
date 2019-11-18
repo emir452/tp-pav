@@ -1,5 +1,5 @@
 ﻿using System.Windows.Forms;
-namespace WindowsFormsApp1
+namespace presentation
 {
     partial class FRMTeacher
     {
@@ -34,12 +34,12 @@ namespace WindowsFormsApp1
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Text = "FRMTeacher";
             view = new ListBox();
-                view.Dock = DockStyle.Fill;
+            view.Dock = DockStyle.Fill;
             btnRegisterClas = new Button();
             btnRegisterClas.Text = "registrar nueva clase";
             btnRegisterClas.Click += new System.EventHandler(btnRegisterClass_click);
-this.Controls.Add(view);
-                // termina 
+            this.Controls.Add(view);
+            // termina 
         }
 
         #endregion

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using visnes;
-namespace WindowsFormsApp1
+namespace  presentation 
 {
     public  class ItemCombo
     {
@@ -15,7 +15,7 @@ namespace WindowsFormsApp1
             this.role = role;
             this.value = value;
         }
-        public String toString()    
+        public override String ToString()    
         {
             return value;
         }

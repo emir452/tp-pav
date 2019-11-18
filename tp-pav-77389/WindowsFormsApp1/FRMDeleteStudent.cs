@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using visnes;
 using visnes.exceptions;
 using domainEntities;
-namespace WindowsFormsApp1
+namespace  presentation 
 {
     public partial class FRMDeleteStudent : Form
     {
@@ -41,15 +41,15 @@ namespace WindowsFormsApp1
             lblName = new Label();
             lblName.Text = "nombre";
             lblNameInformation = new Label();
-            lblNameInformation.Text = found.name;
+            lblNameInformation.Text = found.personalData.name;
             lblSurname = new Label();
             lblSurname.Text = "apellido";
             lblInformationSurname = new Label();
-            lblInformationSurname.Text = found.surname;
+            lblInformationSurname.Text = found.personalData.surname;
             lblDni = new Label();
             lblDni.Text = "DNI";
             lblInformationDni = new Label();
-            lblInformationDni.Text = found.dni.ToString();
+            lblInformationDni.Text = found.personalData.dni.ToString();
             btnDeleteStudent = new Button();
             btnDeleteStudent.Text = "eliminar estudiante";
             btnDeleteStudent.Click += new EventHandler(btnDeleteStudent_click);
@@ -72,7 +72,7 @@ tlp.RowStyles.Add(new RowStyle(SizeType.Percent, 25f));
             {
                 try
                 {
-                    managerActiviti.deleteStudent(found.id);
+                    managerActiviti.deleteStudent(found.personalData.id);
                 }
                 catch (Exception )
                 {

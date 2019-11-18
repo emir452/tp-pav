@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp1
+﻿namespace presentation
 {
     using System.Windows.Forms;
     partial class FRMlogin
@@ -91,6 +91,7 @@
             // 
             this.txtPasword.Location = new System.Drawing.Point(53, 28);
             this.txtPasword.Name = "txtPasword";
+            this.txtPasword.PasswordChar = '*';
             this.txtPasword.Size = new System.Drawing.Size(100, 20);
             this.txtPasword.TabIndex = 3;
             // 
@@ -153,8 +154,8 @@
         private Button btnExit;
 
 
-        
+
     }
-    
+
 }
 
