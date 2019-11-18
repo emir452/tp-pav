@@ -55,9 +55,11 @@
     <Compile Include="IClassDao.cs" />
     <Compile Include="IDao.cs" />
     <Compile Include="IDatabaseConnection.cs" />
+    <Compile Include="IReportDao.cs" />
     <Compile Include="ITemeDao.cs" />
     <Compile Include="ManagerDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SimpleStudentReport.cs" />
     <Compile Include="StudentDao.cs" />
     <Compile Include="TeacherDao.cs" />
     <Compile Include="TemeDao.cs" />
