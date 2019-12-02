@@ -46,5 +46,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Report.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\util\util.csproj">
+      <Project>{ac9fdebe-bcf7-4760-842a-89de12f378d6}</Project>
+      <Name>util</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

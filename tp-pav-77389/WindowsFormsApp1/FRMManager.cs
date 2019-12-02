@@ -12,11 +12,13 @@ namespace      presentation
 {
     public partial class FRMManager : Form
     {
+        private ReportService reportFactori; 
         private ManagerActiviti managerActiviti;
         public FRMManager(ManagerActiviti managerActiviti)
         {
             InitializeComponent();
             this.managerActiviti = managerActiviti;
+            this.reportFactori = new ReportService();
         }
        private void  itemRegisterStudent_click(Object sender, EventArgs e)
         {
@@ -49,6 +51,14 @@ namespace      presentation
         private void itemRegisterTeme_click( object sender, EventArgs e)
         {
             new FRMRegisterTeme().ShowDialog();
+}
+        private void  createStudentReport_click(object sender, EventArgs e)
+        {
+            new ReportViewer(reportFactori.createSimpleStudentReport()).ShowDialog();
+}
+        private void createStudentTemeReport_click(object sender, EventArgs e)
+        {
+            new ReportViewer(reportFactori.createStudentTemeReport()).ShowDialog();
 }
 
     }

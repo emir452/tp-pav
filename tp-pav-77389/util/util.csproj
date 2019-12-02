@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5905A17B-5661-422F-AE75-3DA85F0DC548}</ProjectGuid>
+    <ProjectGuid>{AC9FDEBE-BCF7-4760-842A-89DE12F378D6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>visnes</RootNamespace>
-    <AssemblyName>visnes</AssemblyName>
+    <RootNamespace>util</RootNamespace>
+    <AssemblyName>util</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,40 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="exceptions\ImposibleUpdateException.cs" />
-    <Compile Include="exceptions\ObjectNotFoundException.cs" />
-    <Compile Include="LoggerManager.cs" />
-    <Compile Include="LoggerStudent.cs" />
-    <Compile Include="LoggerTeacher.cs" />
-    <Compile Include="ManagerActiviti.cs" />
-    <Compile Include="Properties\StudentsTemEReport.cs" />
-    <Compile Include="ReportService.cs" />
-    <Compile Include="Role.cs" />
-    <Compile Include="Sesion.cs" />
-    <Compile Include="SimpleStudentReportBuilder.cs" />
-    <Compile Include="StudentTemeReportBuilder.cs" />
-    <Compile Include="TeacherActiviti.cs" />
-    <Compile Include="TemeService.cs" />
-    <Compile Include="User.cs" />
+    <Compile Include="Iterable.cs" />
+    <Compile Include="Iterator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\domainEntities\domainEntities.csproj">
-      <Project>{d6893691-5585-40af-9556-73497985c0a8}</Project>
-      <Name>domainEntities</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\persistence\persistence.csproj">
-      <Project>{fd42daf4-1fd7-47ac-a37c-e36c1f8a4928}</Project>
-      <Name>persistence</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\reports\reports.csproj">
-      <Project>{6dd1a096-ba1f-4113-83da-2d09d9418f77}</Project>
-      <Name>reports</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\util\util.csproj">
-      <Project>{ac9fdebe-bcf7-4760-842a-89de12f378d6}</Project>
-      <Name>util</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

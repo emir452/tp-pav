@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace persistence
+namespace util
 {
-     public interface IReportDao
+     public interface Iterable<E>
     {
-        Object getData();
+        Iterator<E> iterator();
+
     }
 }

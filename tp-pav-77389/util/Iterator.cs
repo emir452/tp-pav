@@ -4,13 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace persistence
+namespace util
 {
-    class SimpleStudentReport : IReportDao
+     public interface Iterator<E>
     {
-        public Object getData()
-        {
-       
-        }
+        Boolean hasNext();
+        E next();
     }
 }

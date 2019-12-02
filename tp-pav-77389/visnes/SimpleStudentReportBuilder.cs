@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+using persistence;
 using reports;
+
 namespace visnes
 {
      public class SimpleStudentReportBuilder : IReportBuilder
@@ -14,7 +17,7 @@ namespace visnes
             report = new Report();
         }
 
-public void createHead()
+public override  void createHead()
         {
             List<string> header = new List<string>();
             header.Add("alumno");
@@ -24,18 +27,24 @@ public void createHead()
             header.Add("obserbaciones");
             report.addRow(header);
 }
-        public void createBodi()
+        public override void createBodi()
 {
+            foreach( DataRow i in new SimpleStudentReportQueri().createQueri().Rows)
+            {
+                report.addRow(toList(i));
+}
+
+
 
 
 }
-        public void createFooter()
+        public override  void createFooter()
         {
 }
-        public IReport GetReport()
+        public override  IReport GetReport()
         {
             return report;
         }
-
+        
             }
 }
