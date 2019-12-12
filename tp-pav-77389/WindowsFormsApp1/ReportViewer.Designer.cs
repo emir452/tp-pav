@@ -32,7 +32,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Text = "visualizador de reporte ";
-            this.Controls.Add(designReport());
+            this.Controls.Add(this.designReport());
         }
 
         #endregion

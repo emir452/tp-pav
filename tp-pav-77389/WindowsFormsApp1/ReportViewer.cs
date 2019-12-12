@@ -33,7 +33,7 @@ namespace presentation
                 tlp.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100 / report.cantCols()));
             }
             Label lblInformation = new Label();
-            Iterator<List<string>> rowsIterator = report.iterator();
+            Iterator<List<string>> rowsIterator = report.iterator();º
             for (int i = 0; i < report.cantRows(); i++)
             {
                 List<string> row = rowsIterator.next();
